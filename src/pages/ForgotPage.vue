@@ -15,7 +15,7 @@
         clearable
         label="Email"
         lazy-rules
-        :rules="rules.email"
+        :rules="[...rules.required, ...rules.email]"
       />
 
       <div class="row justify-center">

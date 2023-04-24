@@ -25,13 +25,9 @@ export default {
     (v: string) => REGEXP.required.test(v) || MESSAGES.limitInput,
   ],
   email: [
-    (v: string) => v !== '' || MESSAGES.required,
     (v: string) => REGEXP.email.test(v) || MESSAGES.email,
-    (v: string) => REGEXP.required.test(v) || MESSAGES.limitInput,
   ],
   password: [
-    (v: string) => v !== '' || MESSAGES.required,
     (v: string) => REGEXP.password.test(v) || MESSAGES.password,
-    (v: string) => REGEXP.required.test(v) || MESSAGES.limitInput,
   ],
 }

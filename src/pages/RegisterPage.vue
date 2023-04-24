@@ -16,7 +16,7 @@
         type="email"
         label="Email"
         lazy-rules
-        :rules="rules.email"
+        :rules="[...rules.required, ...rules.email]"
       />
 
       <q-input
@@ -27,7 +27,7 @@
         label="Пароль"
         class="q-mb-lg"
         lazy-rules
-        :rules="rules.password"
+        :rules="[...rules.required, ...rules.password]"
       />
 
       <!-- <q-toggle

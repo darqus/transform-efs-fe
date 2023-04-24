@@ -25,7 +25,7 @@
         dense
         label="Email"
         lazy-rules
-        :rules="rules.email"
+        :rules="[...rules.required, ...rules.email]"
       />
 
       <q-input

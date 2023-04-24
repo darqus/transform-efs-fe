@@ -15,7 +15,7 @@
         disable
         label="Email"
         lazy-rules
-        :rules="rules.email"
+        :rules="[...rules.required, ...rules.email]"
       />
     </q-form>
   </q-page>
